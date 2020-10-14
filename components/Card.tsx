@@ -12,9 +12,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    margin: 20,
-    aspectRatio: 1,
-    elevation: 30,
+    margin: 10,
+    // elevation: 30,
     backgroundColor: '#fff',
   }
 });

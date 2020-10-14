@@ -12,3 +12,4 @@ export const CATEGORIES = [
   new Category('c9', 'French', require('../assets/categories/French.jpg'), 'white'),
   new Category('c10', 'Summer', require('../assets/categories/summer.jpg'), 'black')
 ];
+

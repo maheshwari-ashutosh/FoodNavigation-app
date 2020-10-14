@@ -3,7 +3,6 @@ import {
   View,
   Text,
   StyleSheet,
-  Button,
   FlatList,
   ListRenderItemInfo,
   ImageBackground,
@@ -29,6 +28,7 @@ const FoodCategories = (props) => {
           justifyContent: 'flex-end',
           borderRadius: 10,
           overflow: 'hidden',
+          aspectRatio: 1
         }}
       >
         <ImageBackground source={item.item.color} style={styles.tileBackground}>
@@ -40,15 +40,11 @@ const FoodCategories = (props) => {
   return (
     <View style={styles.screen}>
       <FlatList
+      columnWrapperStyle={{justifyContent: 'center'}}
         numColumns={2}
+        horizontal={false}
         data={CATEGORIES}
         renderItem={(item) => renderItem(item)}
-      />
-      <Button
-        title='Go to Options'
-        onPress={() => {
-          props.navigation.navigate({routeName: 'Options'});
-        }}
       />
     </View>
   );
@@ -61,7 +57,7 @@ FoodCategories.navigationOptions = {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   tileText: {
     alignSelf: 'flex-start',
